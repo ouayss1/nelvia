@@ -4,15 +4,15 @@ import { Calculator, TrendingUp } from 'lucide-react';
 
 const LossCalculator: React.FC = () => {
   const [missedCalls, setMissedCalls] = useState(15);
-  const [patientValue, setPatientValue] = useState(60);
+  const [clientValue, setClientValue] = useState(60);
   const [conversionRate, setConversionRate] = useState(25);
   const [annualLoss, setAnnualLoss] = useState(0);
 
   useEffect(() => {
-    // Formula: (Missed Calls per week * 52 weeks) * (Conversion Rate / 100) * Patient Value
-    const loss = (missedCalls * 52) * (conversionRate / 100) * patientValue;
+    // Formula: (Missed Calls per week * 52 weeks) * (Conversion Rate / 100) * Client Value
+    const loss = (missedCalls * 52) * (conversionRate / 100) * clientValue;
     setAnnualLoss(Math.round(loss));
-  }, [missedCalls, patientValue, conversionRate]);
+  }, [missedCalls, clientValue, conversionRate]);
 
   const formatCurrency = (val: number) => {
     return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(val);
@@ -28,7 +28,7 @@ const LossCalculator: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          
+
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -47,9 +47,9 @@ const LossCalculator: React.FC = () => {
             </h2>
             {/* Description hidden on mobile */}
             <p className="text-slate-400 text-lg mb-8 max-w-md hidden md:block">
-              Un appel non décroché est souvent un patient qui part chez le concurrent. Utilisez notre simulateur pour estimer le manque à gagner annuel de votre cabinet.
+              Un appel non décroché est souvent un client qui part chez le concurrent. Utilisez notre simulateur pour estimer le manque à gagner annuel de votre entreprise.
             </p>
-            
+
             {/* "Le Saviez-vous" - Desktop Version (Visible only on md+) */}
             <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-6 hidden md:flex items-start gap-4">
               <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center shrink-0">
@@ -58,7 +58,7 @@ const LossCalculator: React.FC = () => {
               <div>
                 <h4 className="font-bold text-white mb-1">Le Saviez-vous ?</h4>
                 <p className="text-sm text-slate-400">
-                  En moyenne, un cabinet médical rate 25% de ses appels entrants, principalement entre 12h-14h et après 18h.
+                  En moyenne, une entreprise rate 25% de ses appels entrants, principalement entre 12h-14h et après 18h.
                 </p>
               </div>
             </div>
@@ -79,10 +79,10 @@ const LossCalculator: React.FC = () => {
                     <label className="font-bold text-slate-700 text-sm md:text-base">Appels manqués /semaine</label>
                     <span className="text-blue-600 font-bold">{missedCalls}</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="1" 
-                    max="100" 
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
                     value={missedCalls}
                     onChange={(e) => setMissedCalls(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
@@ -92,16 +92,16 @@ const LossCalculator: React.FC = () => {
                 {/* Slider 2 */}
                 <div>
                   <div className="flex justify-between mb-2">
-                    <label className="font-bold text-slate-700 text-sm md:text-base">Valeur nouveau patient (€)</label>
-                    <span className="text-blue-600 font-bold">{patientValue}€</span>
+                    <label className="font-bold text-slate-700 text-sm md:text-base">Valeur nouveau client (€)</label>
+                    <span className="text-blue-600 font-bold">{clientValue}€</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="20" 
-                    max="500" 
+                  <input
+                    type="range"
+                    min="20"
+                    max="500"
                     step="10"
-                    value={patientValue}
-                    onChange={(e) => setPatientValue(Number(e.target.value))}
+                    value={clientValue}
+                    onChange={(e) => setClientValue(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   />
                 </div>
@@ -112,10 +112,10 @@ const LossCalculator: React.FC = () => {
                     <label className="font-bold text-slate-700 text-sm md:text-base">Taux de conversion (%)</label>
                     <span className="text-blue-600 font-bold">{conversionRate}%</span>
                   </div>
-                  <input 
-                    type="range" 
-                    min="5" 
-                    max="100" 
+                  <input
+                    type="range"
+                    min="5"
+                    max="100"
                     value={conversionRate}
                     onChange={(e) => setConversionRate(Number(e.target.value))}
                     className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
@@ -125,7 +125,7 @@ const LossCalculator: React.FC = () => {
 
               <div className="bg-slate-50 rounded-2xl p-4 md:p-6 text-center border border-slate-100">
                 <p className="text-xs md:text-sm font-bold text-slate-500 uppercase mb-2">Manque à gagner annuel estimé</p>
-                <motion.div 
+                <motion.div
                   key={annualLoss}
                   initial={{ scale: 0.8, opacity: 0.5 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -143,7 +143,7 @@ const LossCalculator: React.FC = () => {
               </div>
               <div>
                 <p className="text-xs text-slate-400 leading-tight">
-                  <span className="font-bold text-white">Le Saviez-vous ?</span> En moyenne, un cabinet rate 25% de ses appels entrants.
+                  <span className="font-bold text-white">Le Saviez-vous ?</span> En moyenne, une entreprise rate 25% de ses appels entrants.
                 </p>
               </div>
             </div>

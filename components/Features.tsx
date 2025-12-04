@@ -7,17 +7,17 @@ const StaticChat = () => {
     <div className="w-full max-w-[90%] mx-auto flex flex-col gap-3 text-sm">
       {/* Message 1: AI */}
       <div className="self-end bg-blue-600 text-white px-4 py-3 rounded-2xl rounded-tr-sm shadow-md max-w-[85%]">
-        <p>Quelle est l'intensité de la douleur sur 10 ?</p>
+        <p>Quelle est l'urgence de votre demande ?</p>
       </div>
 
       {/* Message 2: User Answer */}
       <div className="self-start bg-white text-slate-700 border border-slate-100 px-4 py-3 rounded-2xl rounded-tl-sm shadow-sm max-w-[85%]">
-        <p>C'est bloqué, je ne peux plus bouger le cou. <span className="font-bold text-blue-600">8/10</span>.</p>
+        <p>J'ai besoin d'une intervention rapide pour une fuite d'eau.</p>
       </div>
 
       {/* Message 3: AI Response */}
       <div className="self-end bg-blue-600 text-white px-4 py-3 rounded-2xl rounded-tr-sm shadow-md max-w-[90%]">
-        <p>Je comprends. J'ai notifié le praticien. Un créneau d'urgence est disponible à <span className="font-bold">11h30</span>.</p>
+        <p>Je comprends. J'ai notifié le technicien. Une intervention est possible à <span className="font-bold">14h00</span>.</p>
       </div>
     </div>
   );
@@ -55,10 +55,10 @@ const Features: React.FC = () => {
         >
           <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">
             Plus qu'un répondeur. <br />
-            Une <span className="text-gradient">secrétaire médicale</span> intelligente.
+            Une <span className="text-gradient">standardiste IA</span> intelligente.
           </h2>
           <p className="text-lg text-slate-500">
-            Nelvia est entraînée spécifiquement pour les praticiens de santé. Elle comprend vos motifs de consultation, rassure vos patients et optimise votre planning.
+            Nelvia est entraînée pour gérer l'accueil de votre entreprise. Elle comprend les demandes, rassure vos clients et optimise votre planning.
           </p>
         </motion.div>
 
@@ -83,9 +83,9 @@ const Features: React.FC = () => {
                   <ShieldAlert className="text-blue-600 w-6 h-6" />
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Qualification des Urgences</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Qualification des Demandes</h3>
               <p className="text-slate-500 max-w-md">
-                L'IA trie les appels par gravité selon vos critères (douleur, blocage, traumatisme). Elle sait distinguer une demande de routine d'une urgence vitale.
+                L'IA qualifie chaque appel selon vos critères. Elle sait distinguer une demande commerciale, une urgence SAV ou une simple prise d'information.
               </p>
             </div>
 
@@ -109,7 +109,7 @@ const Features: React.FC = () => {
               </div>
               <h3 className="text-2xl font-bold mb-2">Agenda Synchronisé</h3>
               <p className="text-blue-100 text-sm">
-                Compatible Doctolib, Julie, Veasy, Maiia et +30 logiciels.
+                Compatible avec votre CRM et votre agenda (Google Calendar, Outlook, etc.).
               </p>
             </div>
             <div className="absolute -right-6 -bottom-6 opacity-20 group-hover:scale-110 transition-transform duration-500">
@@ -127,12 +127,12 @@ const Features: React.FC = () => {
               <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <HeartPulse className="text-purple-600 w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Anti "No-Show"</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Zéro Appel Manqué</h3>
               <div className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 mb-2">
-                -30%
+                100%
               </div>
               <p className="text-slate-500 text-sm">
-                De rendez-vous manqués grâce à la confirmation vocale et aux rappels intelligents.
+                De prise en charge immédiate, 24h/24 et 7j/7, même pendant vos congés.
               </p>
             </div>
           </motion.div>

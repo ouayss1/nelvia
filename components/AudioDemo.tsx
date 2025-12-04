@@ -20,27 +20,27 @@ const AudioDemo: React.FC = () => {
     const scenarios: Scenario[] = [
         {
             id: 1,
-            title: "Urgence Dentaire",
-            role: "Chirurgien-Dentiste",
-            description: "Le patient a une rage de dents. L'IA détecte le mot-clé 'douleur', évalue l'urgence à 8/10 et propose le créneau réservé aux urgences.",
+            title: "Demande de Devis",
+            role: "Artisan / Prestataire",
+            description: "Le client souhaite un devis urgent. L'IA détecte le besoin, qualifie la demande et propose un créneau d'intervention ou de visite.",
             duration: "1:12",
             waves: [40, 70, 30, 80, 50, 90, 30, 60, 40, 70],
             audioSrc: "/audio/scenario_1.mp3"
         },
         {
             id: 2,
-            title: "Dos Bloqué",
-            role: "Ostéopathe",
-            description: "Patient bloqué du dos. L'IA demande les antécédents récents et vérifie si c'est une première consultation avant de booker.",
+            title: "Prise de Rendez-vous",
+            role: "Consultant / Expert",
+            description: "Client cherchant à réserver une consultation. L'IA vérifie les disponibilités et qualifie le besoin avant de confirmer le rendez-vous.",
             duration: "0:45",
             waves: [30, 40, 30, 50, 80, 40, 30, 50, 20, 40],
             audioSrc: "/audio/osteo.mp3"
         },
         {
             id: 3,
-            title: "Info Prix & Accès",
-            role: "Kinésithérapeute",
-            description: "Questions administratives sur le conventionnement et le parking. L'IA répond précisément sans déranger le praticien.",
+            title: "Renseignements & Horaires",
+            role: "Commerce / Boutique",
+            description: "Questions sur les horaires et services. L'IA répond précisément aux questions fréquentes sans déranger votre équipe.",
             duration: "0:58",
             waves: [50, 30, 60, 20, 40, 50, 70, 40, 30, 20],
             audioSrc: "/audio/scenario_3.mp3"
@@ -112,7 +112,7 @@ const AudioDemo: React.FC = () => {
                                 Écoutez Nelvia <br />en action.
                             </h2>
                             <p className="text-slate-500">
-                                Sélectionnez un scénario pour entendre comment l'IA gère les situations réelles de votre cabinet.
+                                Sélectionnez un scénario pour entendre comment l'IA gère les situations réelles de votre entreprise.
                             </p>
                         </motion.div>
 
@@ -236,7 +236,7 @@ const AudioDemo: React.FC = () => {
                                                 {s.id === 2 && <User className="w-5 h-5 mb-2" />}
                                                 {s.id === 3 && <Info className="w-5 h-5 mb-2" />}
                                                 <span className="text-[10px] font-bold leading-tight text-center">
-                                                    {s.title.replace(" & Accès", "")}
+                                                    {s.title.replace(" & Horaires", "")}
                                                 </span>
                                             </button>
                                         ))}

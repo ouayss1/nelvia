@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wide mb-6 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
-              Pour Cabinet Dentaire, Kiné & Ostéo
+              Pour TPE, PME & Professions Libérales
             </div>
           </motion.div>
 
@@ -83,7 +83,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl font-extrabold text-slate-900 leading-[1.15] mb-4 tracking-tight"
           >
-            Ne ratez plus aucun patient. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Jamais.</span>
+            Ne ratez plus aucun client. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Jamais.</span>
           </motion.h1>
 
           <motion.p
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base md:text-lg text-slate-600 mb-8 max-w-lg leading-relaxed"
           >
-            L'IA réceptionniste qui gère vos appels 24/7, qualifie les urgences et remplit votre agenda.
+            L'IA réceptionniste qui gère vos appels 24/7, qualifie les demandes et gère vos rendez-vous.
           </motion.p>
 
           {/* Mobile Visual - Live Analysis (Visible only on Mobile) */}
@@ -216,7 +216,7 @@ const Hero: React.FC = () => {
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                 <span className="text-xs font-bold text-slate-800">Nouveau RDV</span>
               </div>
-              <p className="text-xs text-slate-500">Mme Martin ajouté à 14:30</p>
+              <p className="text-xs text-slate-500">M. Martin ajouté à 14:30</p>
             </motion.div>
 
             <motion.div
@@ -225,10 +225,10 @@ const Hero: React.FC = () => {
               className="absolute bottom-32 -right-6 bg-white p-3 rounded-2xl shadow-lg z-20 max-w-[160px]"
             >
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
-                <span className="text-xs font-bold text-slate-800">Urgence</span>
+                <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+                <span className="text-xs font-bold text-slate-800">Opportunité</span>
               </div>
-              <p className="text-xs text-slate-500">Douleur intense signalée</p>
+              <p className="text-xs text-slate-500">Demande de devis urgente</p>
             </motion.div>
 
             {/* PHONE CONTAINER */}
