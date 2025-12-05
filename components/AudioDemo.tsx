@@ -25,7 +25,7 @@ const AudioDemo: React.FC = () => {
             description: "Le client souhaite un devis urgent. L'IA détecte le besoin, qualifie la demande et propose un créneau d'intervention ou de visite.",
             duration: "1:12",
             waves: [40, 70, 30, 80, 50, 90, 30, 60, 40, 70],
-            audioSrc: "/audio/scenario_1.mp3"
+            audioSrc: "/audio/demo1.mp3"
         },
         {
             id: 2,
@@ -34,16 +34,16 @@ const AudioDemo: React.FC = () => {
             description: "Client cherchant à réserver une consultation. L'IA vérifie les disponibilités et qualifie le besoin avant de confirmer le rendez-vous.",
             duration: "0:45",
             waves: [30, 40, 30, 50, 80, 40, 30, 50, 20, 40],
-            audioSrc: "/audio/osteo.mp3"
+            audioSrc: "/audio/demo2.mp3"
         },
         {
             id: 3,
-            title: "Renseignements & Horaires",
-            role: "Commerce / Boutique",
-            description: "Questions sur les horaires et services. L'IA répond précisément aux questions fréquentes sans déranger votre équipe.",
+            title: "Réservation de Table",
+            role: "Restaurateur",
+            description: "Prise de réservation pour 4 personnes. L'IA gère le plan de salle, propose des créneaux alternatifs et note les allergies ou préférences.",
             duration: "0:58",
             waves: [50, 30, 60, 20, 40, 50, 70, 40, 30, 20],
-            audioSrc: "/audio/scenario_3.mp3"
+            audioSrc: "/audio/demo3.mp3"
         },
     ];
 
@@ -236,7 +236,7 @@ const AudioDemo: React.FC = () => {
                                                 {s.id === 2 && <User className="w-5 h-5 mb-2" />}
                                                 {s.id === 3 && <Info className="w-5 h-5 mb-2" />}
                                                 <span className="text-[10px] font-bold leading-tight text-center">
-                                                    {s.title.replace(" & Horaires", "")}
+                                                    {s.title.replace(" de Table", "")}
                                                 </span>
                                             </button>
                                         ))}
