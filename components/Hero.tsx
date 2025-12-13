@@ -46,6 +46,12 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative pt-28 pb-16 md:pb-32 overflow-hidden">
+      {/* Global Background Grid Pattern */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-blue-400 opacity-20 blur-[100px]"></div>
+      </div>
+
       {/* Background Blobs with pulse animation (Desktop) */}
       <div className="hidden lg:block absolute top-0 right-0 -z-10 opacity-40 pointer-events-none">
         <motion.div
@@ -57,6 +63,13 @@ const Hero: React.FC = () => {
           animate={{ scale: [1.1, 1, 1.1], opacity: [0.5, 0.8, 0.5] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           className="w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl absolute top-20 right-20"
+        />
+        {/* New Left-Side Gradient Orb to anchor text */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.2, scale: [1, 1.2, 1] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+          className="w-[400px] h-[400px] bg-indigo-300 rounded-full mix-blend-multiply filter blur-[80px] absolute top-20 -left-64 z-0"
         />
       </div>
 

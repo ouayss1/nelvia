@@ -29,10 +29,8 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center gap-2.5 cursor-pointer group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
-            <Sparkles className="text-white w-5 h-5" />
-          </div>
+        <div>
+          <Sparkles className="text-white w-5 h-5" />
           <span className="text-2xl font-extrabold text-slate-900 tracking-tighter">
             Nelvia<span className="text-blue-600">.</span>
           </span>
